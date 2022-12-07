@@ -227,3 +227,27 @@ body {
     padding-bottom: 7px;
 }
 
+.searcht{
+    text-align: center;
+}
+
+.searcht h1{
+    font-family: 'Figtree', sans-serif;
+    color: #e1d8df;
+    color-shadow: 0 0 2px #e1d8df;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 50px;
+    letter-spacing: 3px;
+    background-color: #034C65;
+    box-shadow: 5px 0 20px #034C65;
+}
+
+.sContainer{
+    padding-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+}
