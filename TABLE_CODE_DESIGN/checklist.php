@@ -13,20 +13,20 @@
             </div>
             <div class="navLinks">
                 <ul>
-                    <li><a href="" class="active">HOME</a></li>
-                    <li><a href="">COURSES</a></li>
-                    <li><a href="">ABOUT</a></li>
+                    <li><a href="filter.php" class="active">HOME</a></li>
+                    <li><a href="filter.php">COURSES</a></li>
+                    <li><a href="filter.php">ABOUT</a></li>
                 </ul>
             </div>
             <div class="navIcons">
-                <a href="filtercheck.php"><i class='bx bx-search-alt' ></i></a>
+                <a href=""><i class='bx bx-search-alt' ></i></a>
                 <a href=""><i class='bx bx-log-out-circle' ></i></a>
             </div>
         </nav>
 
 		<section class="table">
 			<div class="tableTitle">
-				<h1>SEARCH RESULTS</h1>
+				<a href="filter.php"><h1 class="neon">SEARCH RESULTS</h1></a>
 			</div>
 			<div class="table-wrap">
 				<table>
