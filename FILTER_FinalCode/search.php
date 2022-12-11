@@ -1,26 +1,65 @@
 <!DOCTYPE html>
 <html>
     <head>
-    <link href="style.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css"/>
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="table.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css"/>
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' href= 'https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;700;900&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap') rel='stylesheet'>
+        <link href="style.css"/>
         <title>BSC</title>
         <link rel="icon" href="imgs/BSC.png" type="image/ico" >
     </head>
     <body>
-        <h1>Search Results</h1>
 
-        <table>
-            <tr>
-                <th>Student No.</th>
-                <th>Student Surname</th>
-                <th>Course Name</th>
-                <th>Instructor</th>
-                <th>Room</th>
-                <th>Building</th>
-                <th>Semester Taken</th>
-                <th>Acad Year</th>
-            </tr>
+    <nav class="navBar">
+            <div class="navLogo">
+                <a href="">B<span>S</span>C</a>
+            </div>
+            
+            <div class="navLinks">
+                <ul>
+                    <li><a href="filter.php" class="active">HOME</a></li>
+                    <li><a href="filter.php">COURSES</a></li>
+                    <li><a href="filter.php">ABOUT</a></li>
+                </ul>
+            </div>
+            <div class="navIcons">
+                <a href=""><i class='bx bx-search-alt' ></i></a>
+                <a href=""><i class='bx bx-log-out-circle' ></i></a>
+            </div>
+        </nav>
+       
+        <section class="table">
+			<div class="tableTitle">
+				<a href="filter.php"><h1 class="neon">SEARCH RESULTS</h1></a>
+			</div>
+            <div class="table-wrap1">
+            <table>
+                <tr>
+                    <th>Student No.</th>
+                    <th>Student Surname</th>
+                    <th>Course Name</th>
+                    <th>Instructor</th>
+                    <th>Room</th>
+                    <th>Building</th>
+                    <th>Semester Taken</th>
+                    <th>Acad Year</th>
+                </tr>
+          <!--   <footer class="footerr">
+        <div class="footerr1">
+                <div class="footerrLogo">
+                    <p>B<span>S</span>C</p>
+                </div>
+            </div>
 
+            <div class="footerr2">
+                <div class="footerrBot">
+                    <div class="footerrInf">
+                    </div>	
+                    <div class="footerrEnd">
+                        <p> BSC est. 2022 | All rights reserved — This website is designed and arranged by <span>BARREDO • CONCEPCION • SANTOS</span>.</p>
+                    </div>
+                </div>
+            </div>
+        </footer> -->
             <?php
                if (isset($_GET['semTaken']) && isset($_GET['acadYear'])) {
                     $semTaken = $_GET['semTaken'];
@@ -71,9 +110,17 @@
                     }
                     echo "</table>";
                 } else {
-                    echo "no result";
+                	echo 
+						"<tr>
+							<td colspan='5'> No Results Found </td>
+							</tr>
+						</table>";
                 }
                 $conn-> close();
+                
+            ?>
+            <?php
+            echo "The time is " . date("h:i:sa");
             ?>
 	    </table>
     </body>
