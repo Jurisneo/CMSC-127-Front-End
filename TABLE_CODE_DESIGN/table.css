@@ -2,6 +2,7 @@
 
 * {
     font-family: Arial, Helvetica, sans-serif;
+    color: #957dad;
     font-weight: 400;
     margin: 0;
     padding: 0;
@@ -328,7 +329,7 @@ tr:hover {
  */
 /** for table of seach.php **/
 
-.table1 {
+/* .table1 {
     padding: 2% 2% 10% 2%;
     height: 100%;
     width: 100%;
@@ -368,7 +369,7 @@ tr:hover {
         opacity: 0;
     }
 }
-
+ */
 .table-wrap1 {
     border: 3px solid #034C65;
     box-shadow: 0 0 5px #034C65;
@@ -384,7 +385,7 @@ tr:hover {
     width: 80%;
 }
 
-.table1 {
+/* .table1 {
     width: 100%;
     border-collapse: collapse;
     border-spacing: 0;
@@ -393,4 +394,4 @@ tr:hover {
     min-width: fit-content;
     left: auto;
     right: auto;
-}
+} */
