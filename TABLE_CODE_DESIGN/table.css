@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;700;900&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap');
 
 * {
-    font-family: 'Work Sans', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -108,11 +109,18 @@ body {
 }
 .table .tableTitle {
     text-align: center;
+    animation: blinker 2s linear infinite;
+    font-family: sans-serif;
+}
+@keyframes blinker {
+    80% {
+        opacity: 0;
+    }
 }
 
 .table .tableTitle h1{
     font-family: 'Figtree', sans-serif;
-    color: #2F1F2B;
+    color: #6f355b;
 	text-transform: uppercase;
 	font-weight: 900;
 	font-size: 50px;
@@ -128,7 +136,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     overflow-y: scroll;
-    overflow-x: hidden;
+    overflow-x: scrol;
     max-height: 300px;
     justify-content: center;
     align-items: center;
@@ -178,6 +186,7 @@ tr:hover {
     width: 100%;
     justify-content: center;
     align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .results h3 {
@@ -188,4 +197,200 @@ tr:hover {
     font-weight: 700;
     margin: 5px 0;
 }
+.navBar1 {
+    position: fixed;
+    width: 100%;
+    right:0px;
+    padding: 5px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #034C65;
+    box-shadow: 5px 0 20px #034C65;
+    top: 0;
+}
 
+.navBar1 .navLogo1 a{
+    color: #FAFAFA;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.navBar1 .navLogo1 span{
+    color: #FCB677;
+    font-size: 60px;
+    text-shadow: 0 0 2px #FCB677;
+}
+
+.navBar1 .navLogo1 span:hover{
+    color: #EF8C86;
+    text-shadow: 0 0 2px #EF8C86;
+    transition: 0.5s ease;
+}
+
+.navBar1 .navLinks1 li{
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.navBar1 .navLinks1 li a{
+    display: block;
+    margin-left: 20px;
+    color: #FAFAFA;
+    font-family: 'Figtree', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.navBar1 .navLinks1 li .active{
+    border-bottom: 4px solid #EF8C86;
+}
+
+.navBar1 .navLinks1 li a:hover{
+    border-bottom: 4px solid #FCB677;
+    transition: 0.3s ease;
+}
+
+.navBar1 .navIcons1 a{
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.navBar1 .navIcons1 a i{
+    color: #FCB677;
+    font-weight: 900;
+    font-size: 40px;
+}
+
+.navBar1 .navIcons1 a i:hover{
+    color: #FAFAFA;
+    text-shadow: 0 0 2px #FAFAFA;
+	transform: scale(1.2);
+    transition: 0.3s linear;
+}
+/** footer for search.php  **//* 
+.footerr{
+    padding: 2px;
+    background-color: #2F1F2B;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    position: fixed;
+}
+
+.footerr .footerr1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerr .footerr1 .footerrLogo{
+    color: #FAFAFA;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    text-shadow: 0 0 2px #FAFAFA;
+}
+
+.footerr .footerr1 .footerrLogo span{
+    color: #FCB677;
+    font-size: 30px;
+    text-shadow: 0 0 4px #FCB677;
+}
+
+.footerr .footerr2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerr .footerr2 .footerrBot{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Figtree', sans-serif;
+    font-weight: 500;
+}
+
+.footerr .footerr2 .footerrBot .footerrInf{
+    text-align: center;
+    color: #FAFAFA;
+    font-size: 10px;
+}
+
+.footerr .footerr2 .footerrBot .footerrEnd{
+    text-align: center;
+    color: #FAFAFA;
+    font-size: 8px;
+    padding-bottom: 7px;
+}
+ */
+/** for table of seach.php **/
+
+.table1 {
+    padding: 2% 2% 10% 2%;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background-image: linear-gradient(rgba(250, 250, 250, 0.9), rgba(47, 31, 43, 0.4)), url(imgs/oble.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: fixed;
+    cursor: pointer;
+}
+.table .tableTitle {
+    text-align: center;
+   
+}
+
+.table1 .tableTitle1 h1{
+    font-family: 'Figtree', sans-serif;
+    color: #6f355b;
+	text-transform: uppercase;
+	font-weight: 900;
+	font-size: 50px;
+	letter-spacing: 3px;
+    text-align: center;
+    right: 0;
+    left: 0;
+    justify-content: center;
+    animation: blinker 2s linear infinite;
+    font-family: sans-serif;
+}
+@keyframes blinker {
+    80% {
+        opacity: 0;
+    }
+}
+
+.table-wrap1 {
+    border: 3px solid #034C65;
+    box-shadow: 0 0 5px #034C65;
+    background-color: #FAFAFA;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-y: scroll;
+    overflow-x: scroll;
+    max-height: 5000px;
+    font-weight: 500;
+    width: 80%;
+}
+
+.table1 {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: fit-content;
+    left: auto;
+    right: auto;
+}
