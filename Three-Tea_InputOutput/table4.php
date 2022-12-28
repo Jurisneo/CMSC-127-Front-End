@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Table with database</title>
+        <title>ROOM Table</title>
         <link href="style.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css"/>
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         <title>BSC</title>
