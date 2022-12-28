@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Table with database</title>
+        <title>INSTRUCTOR Table</title>
         <link href="style.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css"/>
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         <title>BSC</title>
@@ -19,7 +19,7 @@ th {
 background-color: #588c7e;
 color: white;
 }
-tr:nth-child(even) {background-color: #f2f2f2}
+tr:nth-child() {background-color: #f2f2f2}
 </style>
     </head>
     <nav class="navBar">
@@ -28,9 +28,12 @@ tr:nth-child(even) {background-color: #f2f2f2}
             </div>
             <div class="navLinks">
                 <ul>
-                    <li><a href="" class="active">HOME</a></li>
-                    <li><a href="">COURSES</a></li>
-                    <li><a href="">ABOUT</a></li>
+                <li><a href="filter.php">HOME</a></li>
+                    <li><a href="table1.php">CHECKLIST</a></li>
+                    <li><a href="table2.php">COURSE</a></li>
+                    <li><a href="table3.php">INSTRUCTOR</a></li>
+                    <li><a href="table4.php">STUDENT</a></li>
+                    <li><a href="table5.php">ROOM</a></li>
                 </ul>
             </div>
             <div class="navIcons">
@@ -47,6 +50,7 @@ tr:nth-child(even) {background-color: #f2f2f2}
         <th>Middle Initial</th>
         <th>Sex</th>
         <th>Email</th>
+        <th>Action</th>
     </tr>
     <footer class="footer">
             <div class="footer1">
@@ -68,23 +72,32 @@ tr:nth-child(even) {background-color: #f2f2f2}
         </footer>
 
 
-<?php
-$conn = mysqli_connect("localhost", "root", "", "CMSC127_RSC_db");
-// Check connection
-if ($conn->connect_error) {
-die("Connection failed: " . $conn->connect_error);
-}
-$sql = "SELECT Ins_ID, Ins_LastName, Ins_FirstName, Ins_MiddleIn, Ins_Sex, Ins_Email FROM INSTRUCTOR";
-$result = $conn->query($sql);
-if ($result->num_rows > 0) {
-// output data of each row
-while($row = $result->fetch_assoc()) {
-echo "<tr><td>" . $row["Ins_ID"]. "</td><td>" . $row["Ins_LastName"] ."</td><td>" .$row["Ins_FirstName"]."</td><td>". $row["Ins_MiddleIn"]."</td><td>". $row["Ins_Sex"]. "</td><td>". $row["Ins_Email"]. "</td></tr>";
-}
-echo "</table>";
-} else { echo "0 results"; }
-$conn->close();
-?>
-</table>
-</body>
+        <?php
+            $conn = mysqli_connect("localhost", "root", "", "CMSC127_RSC_db");
+            // Check connection
+            if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+            }
+            $sql = "SELECT Ins_ID, Ins_LastName, Ins_FirstName, Ins_MiddleIn, Ins_Sex, Ins_Email FROM INSTRUCTOR";
+            $result = $conn->query($sql);
+            if ($result->num_rows > 0) {
+            // output data of each row
+            while($row = $result->fetch_assoc()) {
+            echo "<tr>
+            <td>" . $row["Ins_ID"]. "</td>
+            <td>" . $row["Ins_LastName"] ."</td>
+            <td>" .$row["Ins_FirstName"]."</td>
+            <td>". $row["Ins_MiddleIn"]."</td>
+            <td>". $row["Ins_Sex"]. "</td>
+            <td>". $row["Ins_Email"]. "</td>
+            <td><a href='delete1.php'? id=". 
+                $row["CList_ID"] .">DELETE</a></td>
+            </tr>";
+            }
+            echo "</table>";
+            } else { echo "0 results"; }
+            $conn->close();
+            ?>
+        </table>
+    </body>
 </html>
