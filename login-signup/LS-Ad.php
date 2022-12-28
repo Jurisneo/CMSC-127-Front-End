@@ -36,7 +36,7 @@
                     <h1>ADMIN</h1>
                 </div>
                 
-                <form id="login" class="formGrp1">
+                <form id="login" class="formGrp1" action="" method="">
                     <input type="text" name="username1" class="LSinput" placeholder="USERNAME" required>
                     <input type="password" id="show" name="password1" class="LSinput" placeholder="PASSWORD" required>
                     <div class="check">
@@ -46,7 +46,7 @@
                     <button type="submit" name="btnSubmit1" class="btnSubmit">LOG IN</button>
                 </form>
 
-                <form id="signup"class="formGrp2">
+                <form id="signup"class="formGrp2" action="" method="">
                     <input type="text" name="dept1"class="LSinput" placeholder="DEPARTMENT" required>
                     <input type="text" name="username1.2" class="LSinput" placeholder="USERNAME" required>
                     <input type="password" name="password1.2" class="LSinput" placeholder="PASSWORD" required>
