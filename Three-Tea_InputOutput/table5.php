@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Table with database</title>
+        <title>STUDENT Table</title>
         <link href="style.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css"/>
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         <title>BSC</title>
@@ -19,7 +19,7 @@ th {
 background-color: #588c7e;
 color: white;
 }
-tr:nth-child(even) {background-color: #f2f2f2}
+tr:nth-child() {background-color: #f2f2f2}
 </style>
     </head>
     <nav class="navBar">
@@ -28,9 +28,12 @@ tr:nth-child(even) {background-color: #f2f2f2}
             </div>
             <div class="navLinks">
                 <ul>
-                    <li><a href="" class="active">HOME</a></li>
-                    <li><a href="">COURSES</a></li>
-                    <li><a href="">ABOUT</a></li>
+                <li><a href="filter.php">HOME</a></li>
+                    <li><a href="table1.php">CHECKLIST</a></li>
+                    <li><a href="table2.php">COURSE</a></li>
+                    <li><a href="table3.php">INSTRUCTOR</a></li>
+                    <li><a href="table4.php">STUDENT</a></li>
+                    <li><a href="table5.php">ROOM</a></li>
                 </ul>
             </div>
             <div class="navIcons">
@@ -50,6 +53,7 @@ tr:nth-child(even) {background-color: #f2f2f2}
         <th>Year</th>
         <th>Email</th> 
         <th>Number</th>
+        <th>Action</th>
     </tr>
     <footer class="footer">
             <div class="footer1">
@@ -82,7 +86,19 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
 // output data of each row
 while($row = $result->fetch_assoc()) {
-    echo "<tr><td>" . $row["Stud_ID"]. "</td><td>" . $row["Stud_Num"] ."</td><td>" .$row["Stud_LastName"]."</td><td>". $row["Stud_FirstName"]."</td><td>". $row["Stud_MidName"]."</td><td>". $row["Stud_Sex"]."</td><td>". $row["Stud_Year"]."</td><td>". $row["Stud_Email"]."</td><td>". $row["Stud_PhoneNum"]. "</td></tr>";
+    echo "<tr>
+    <td>" . $row["Stud_ID"]. "</td>
+    <td>" . $row["Stud_Num"] ."</td>
+    <td>" .$row["Stud_LastName"]."</td>
+    <td>". $row["Stud_FirstName"]."</td>
+    <td>". $row["Stud_MidName"]."</td>
+    <td>". $row["Stud_Sex"]."</td>
+    <td>". $row["Stud_Year"]."</td>
+    <td>". $row["Stud_Email"]."</td>
+    <td>". $row["Stud_PhoneNum"]. "</td>
+    <td><a href='delete1.php'? id=". 
+                $row["CList_ID"] .">DELETE</a></td>
+    </tr>";
 }
 echo "</table>";
 } else { echo "0 results"; }
