@@ -24,17 +24,22 @@
             </div>
             <div class="navLinks">
                 <ul>
-                    <li><p>RS Student Checklist Database</p></li>
+                    <li><a href="Landing-Stud.php">HOME</a></li>
+                    <li><a href="studprofile.php" class="active">PROFILE</a></li>
+                    <li><a href="studchecklist.php">CHECKLIST</a></li>
+                    <li><a href="addToCheck.php">ENROLL</a></li>
+                    <li><a href="studcrs.php">COURSES</a></li>
                 </ul>
             </div>
             <div class="navIcons">
-                <a href="../index.php"><i class='bx bxs-home' ></i></a>
+                <a href="studprofile.php"><i class='bx bx-arrow-back'></i></a>
+                <a href="../index.php"><i class='bx bx-log-out-circle' ></i></a>
             </div>
         </nav>
         
-        <section class="container-sign">
-            <div class="formBox-sign">
-                <div class="boxTitle-sign">
+        <section class="container-add">
+            <div class="formBox-add">
+                <div class="boxTitle-add">
                     <h1>Student Information</h1>
                 </div>
 
