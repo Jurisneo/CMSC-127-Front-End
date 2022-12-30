@@ -40,7 +40,7 @@
         <section class="container-add">
             <div class="formBox-add">
                 <div class="boxTitle-add">
-                    <h1>Edit Profile</h1>
+                    <h1>Edit Your Profile</h1>
                 </div>
 
                 <form action="studsubmission.php" method="POST">
