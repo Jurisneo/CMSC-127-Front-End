@@ -44,7 +44,7 @@
 
             <div class="mini-title2">
                 <div class="add-btn">
-                        <button class="addbtn" type="submit" name="studProf"><i class='bx bxs-edit' ></i> Edit Profile</button></a>
+                        <a href="studprof-edit.php"><button class="addbtn" type="submit" name="studProf"><i class='bx bxs-edit' ></i> Edit Profile</button></a>
                     </div>
 		        </div>
 	        </div>
