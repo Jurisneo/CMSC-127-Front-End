@@ -21,7 +21,7 @@
                 </ul>
             </div>
             <div class="navIcons">
-                <a href="Landing-Stud.php"><i class='bx bx-arrow-back'></i></a>
+                <a href="studprofile.php"><i class='bx bx-arrow-back'></i></a>
                 <a href="../index.php"><i class='bx bx-log-out-circle' ></i></a>
             </div>
         </nav>
